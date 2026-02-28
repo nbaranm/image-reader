@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v2t.local/schemas/output.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "technical_summary",
+    "confidence_score",
+    "assumptions",
+    "data_models",
+    "api_contract",
+    "frontend_structure",
+    "backend_structure",
+    "folder_tree",
+    "code_snippets",
+    "optimization_notes"
+  ],
+  "properties": {
+    "technical_summary": {"type": "string"},
+    "confidence_score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "data_models": {"type": "object"},
+    "api_contract": {"type": "object"},
+    "frontend_structure": {"type": "object"},
+    "backend_structure": {"type": "object"},
+    "folder_tree": {"type": "string"},
+    "code_snippets": {"type": "object"},
+    "optimization_notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
